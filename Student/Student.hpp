@@ -8,11 +8,7 @@ private:
 public:
 	Student() = default;
 	//
-	void Set_Surname(const string element);
-	void Set_Name(const string element);
-	void Set_Album_num(const string element);
-	void Set_Grupe(const string element);
-	void Set_Year(const string element);
+	void Set_Value(const string element, const int index);
 	//
 	~Student();
 };

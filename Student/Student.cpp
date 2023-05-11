@@ -5,29 +5,18 @@ using namespace std;
 
 #include "Student.hpp"
 
-void Student::Set_Surname(const string element)
+void Student::Set_Value(const string element, const int index)
 {
-	this->surname = element;
-}
-
-void Student::Set_Name(const string element)
-{
-	this->name = element;
-}
-
-void Student::Set_Album_num(const string element)
-{
-	this->album_num = element;
-}
-
-void Student::Set_Grupe(const string element)
-{
-	this->grupe = element;
-}
-
-void Student::Set_Year(const string element)
-{
-	this->year = stoi(element);
+    if (index % 2 == 0)
+        this->name = element;
+    else if (index % 3 == 0)
+        this->album_num = element;
+    else if (index % 4 == 0)
+        this->grupe = element;
+    else if (index % 5 == 0)
+        this->year = stoi(element);
+    else
+        this->surname = element;
 }
 
 Student::~Student(){}

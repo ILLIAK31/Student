@@ -22,16 +22,7 @@ int main()
         {
             if (line_num == 1)
                 student = new Student;
-            if (line_num % 2 == 0)
-                student->Set_Name(line);
-            else if (line_num % 3 == 0)
-                student->Set_Album_num(line);
-            else if (line_num % 4 == 0)
-                student->Set_Grupe(line);
-            else if (line_num % 5 == 0)
-                student->Set_Year(line);
-            else
-                student->Set_Surname(line);
+            student->Set_Value(line, line_num);
             ++line_num;
             if (line_num == 6)
             {

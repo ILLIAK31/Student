@@ -2,12 +2,14 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 #include "Student.hpp"
 
 void Delete_All(vector <Student*>& students);
+bool Is_three(Student* student);
 
 int main()
 {
@@ -35,6 +37,9 @@ int main()
     //
     
     //
+    auto print = [](Student* student) { cout << *student; };
+    for_each(students.begin(), students.end(), print);
+    cout << endl << "Number of students which are on 3 year" << endl << "Number : " << count_if(students.begin(), students.end(), Is_three) << endl;
     Delete_All(students);
     return 0;
 }
@@ -48,4 +53,11 @@ void Delete_All(vector<Student*>& students)
     }
     students.clear();
     cout << endl << "Students were deleted" << endl;
+}
+
+bool Is_three(Student* student)
+{
+    if ((student->Get_Year()) == 3)
+        return true;
+    return false;
 }

@@ -1,3 +1,0 @@
-|Surname : Neutron | Name: Jimmy | Number of album : 352234 | Grupe : 124_B | Year : 2 |
-|Surname : Lebron | Name: James | Number of album : 242354 | Grupe : 123_A | Year : 1 |
-|Surname : Jordan | Name: Michael | Number of album : 928933 | Grupe : 123_B | Year : 3 |

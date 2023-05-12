@@ -21,11 +21,6 @@ void Student::Set_Value(const string element, const int index)
         this->surname = element;
 }
 
-int Student::Get_Year()
-{
-    return this->year;
-}
-
 ostream& operator<<(ostream& output, const Student student)
 {
     output << "|Surname : " << student.surname << " | Name: " << student.name << " | Number of album : " << student.album_num << " | Grupe : " << student.grupe << " | Year : " << student.year << " |" << endl;

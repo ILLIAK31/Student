@@ -10,8 +10,9 @@ public:
 	void Set_Value(const string element, const int index);
 	int Get_Year();
 	friend ostream& operator<<(ostream& output,const Student student);
+	friend ostream& operator<<(ostream& output,const vector<Student*> students);
 	//
-	
+
 	//
 	~Student();
 };

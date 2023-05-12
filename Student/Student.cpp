@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -27,6 +28,15 @@ int Student::Get_Year()
 ostream& operator<<(ostream& output, const Student student)
 {
     output << "|Surname : " << student.surname << " Name: " << student.name << " Number of album : " << student.album_num << " Grupe : " << student.grupe << " Year : " << student.year << " |" << endl;
+    return output;
+}
+
+ostream& operator<<(ostream& output,const vector<Student*> students)
+{
+    for (auto student : students)
+    {
+        output << "|Surname : " << student->surname << " Name: " << student->name << " Number of album : " << student->album_num << " Grupe : " << student->grupe << " Year : " << student->year << " |" << endl;
+    }
     return output;
 }
 

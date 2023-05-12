@@ -34,8 +34,14 @@ int main()
         }
     }
     student = nullptr;
+    ofstream obj2("Data.txt");
+    if (obj2.is_open())
+    {
+        obj2 << students;
+    }
+    obj2.close();
     //
-    
+
     //
     auto print = [](Student* student) { cout << *student; };
     for_each(students.begin(), students.end(), print);

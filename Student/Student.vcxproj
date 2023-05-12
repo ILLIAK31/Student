@@ -134,6 +134,7 @@
     <ClInclude Include="Student.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Data.txt" />
     <Text Include="Data0.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

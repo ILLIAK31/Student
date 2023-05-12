@@ -34,10 +34,11 @@ int main()
         }
     }
     student = nullptr;
-    ofstream obj2("Data.txt");
+    fstream obj2("Data.txt");
     if (obj2.is_open())
     {
-        obj2 << students;
+        for (auto student : students)
+            obj2 >> student;
     }
     obj2.close();
     //

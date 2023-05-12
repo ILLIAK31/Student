@@ -9,16 +9,23 @@ using namespace std;
 
 void Student::Set_Value(const string element, const int index)
 {
-    if (index == 2)
-        this->name = element;
-    else if (index == 3)
-        this->album_num = element;
-    else if (index == 4)
-        this->grupe = element;
-    else if (index == 5)
-        this->year = stoi(element);
-    else
+    switch (index)
+    {
+    case 1:
         this->surname = element;
+        break;
+    case 2:
+        this->name = element;
+        break;
+    case 3:
+        this->album_num = element;
+        break;
+    case 4:
+        this->grupe = element;
+        break;
+    default:
+        this->year = stoi(element);
+    }
 }
 
 ostream& operator<<(ostream& output, const Student student)

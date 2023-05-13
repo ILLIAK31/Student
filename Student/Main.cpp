@@ -35,10 +35,8 @@ int main()
     student = nullptr;
     fstream obj2("Data.txt");
     if (obj2.is_open())
-    {
         for (auto student : students)
             obj2 >> student;
-    }
     obj2.close();
     ifstream obj3("Data.txt");
     if (obj3.is_open())

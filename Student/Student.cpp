@@ -7,7 +7,7 @@ using namespace std;
 
 #include "Student.hpp"
 
-void Student::Set_Value(const string element, const int index)
+void Student::Set_Value(const string element, int& index)
 {
     switch (index)
     {
@@ -26,6 +26,7 @@ void Student::Set_Value(const string element, const int index)
     default:
         this->year = stoi(element);
     }
+    ++index;
 }
 
 ostream& operator<<(ostream& output, const Student student)

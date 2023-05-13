@@ -25,7 +25,6 @@ int main()
             if (line_num == 1)
                 student = new Student;
             student->Set_Value(line, line_num);
-            ++line_num;
             if (line_num == 6)
             {
                 students.push_back(student);

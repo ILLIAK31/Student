@@ -15,11 +15,11 @@ int main()
 {
     Student* student = nullptr;
     vector<Student*> students;
-    int line_num = 1;
-    string line;
     ifstream obj("Data0.txt");
     if (obj.is_open())
     {
+        int line_num = 1;
+        string line;
         while (getline(obj, line)) 
         {
             if (line_num == 1)
@@ -40,8 +40,11 @@ int main()
     obj2.close();
     ifstream obj3("Data.txt");
     if (obj3.is_open())
+    {
+        string line;
         while (getline(obj3, line))
             cout << line << endl;
+    }
     obj3.close();
     cout << endl;
     auto print = [](const Student* student) { cout << *student; };

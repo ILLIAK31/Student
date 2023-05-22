@@ -49,7 +49,7 @@ int main()
     cout << endl;
     auto print = [](const Student* student) { cout << *student; };
     for_each(students.begin(), students.end(), print);
-    cout << endl << "Number of students which are on 3 year" << endl << "Number : " << count_if(students.begin(), students.end(), Is_three) << endl;
+    cout << endl << "Number of students which are on 3 year" << endl << "Number : " << count_if(students.begin(), students.end(), [](Student* const student) { return (student->Get_Year() == 3)?true:false; }) << endl;
     Delete_All(students);
     return 0;
 }
@@ -63,11 +63,4 @@ void Delete_All(vector<Student*>& students)
     }
     students.clear();
     cout << endl << "Students were deleted" << endl;
-}
-
-bool Is_three(const Student* student)
-{
-    if ((student->year) == 3)
-        return true;
-    return false;
 }

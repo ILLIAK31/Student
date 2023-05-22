@@ -41,4 +41,9 @@ fstream& operator>>(fstream& input,const Student* student)
     return input;
 }
 
+int Student::Get_Year()
+{
+    return this->year;
+}
+
 Student::~Student(){}

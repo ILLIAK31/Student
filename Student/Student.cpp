@@ -35,10 +35,16 @@ ostream& operator<<(ostream& output, const Student student)
     return output;
 }
 
-fstream& operator>>(fstream& input,const Student* student)
+ofstream& operator<<(ofstream& input,const Student& student)
 {
-    input << "|Surname : " << student->surname << " | Name: " << student->name << " | Number of album : " << student->album_num << " | Grupe : " << student->grupe << " | Year : " << student->year << " |" << endl;
+    input << "|Surname : " << student.surname << " | Name: " << student.name << " | Number of album : " << student.album_num << " | Grupe : " << student.grupe << " | Year : " << student.year << " |" << endl;
     return input;
+}
+
+ifstream& operator>>(ifstream& input, Student& data)
+{
+    input >> data.surname >> data.name >> data.album_num >> data.grupe >> data.year;
+    return input;   
 }
 
 int Student::Get_Year()

@@ -7,7 +7,6 @@ private:
 	int year{};
 public:
 	Student() = default;
-	void Set_Value(const string element,int& index);
 	friend ostream& operator<<(ostream& output,const Student student);
 	friend ofstream& operator<<(ofstream& input,const Student& student);
 	friend ifstream& operator>>(ifstream& input, Student& data);

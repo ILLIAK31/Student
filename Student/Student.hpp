@@ -7,9 +7,9 @@ private:
 	int year{};
 public:
 	Student() = default;
-	friend ostream& operator<<(ostream& output,const Student student);
+	friend ifstream& operator>>(ifstream& input,Student& const data);
 	friend ofstream& operator<<(ofstream& input,const Student& student);
-	friend ifstream& operator>>(ifstream& input, Student& data);
+	friend ostream& operator<<(ostream& output,const Student student);
 	int Get_Year();
 	~Student();
 };

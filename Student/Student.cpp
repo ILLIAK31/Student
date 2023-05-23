@@ -7,10 +7,10 @@ using namespace std;
 
 #include "Student.hpp"
 
-ostream& operator<<(ostream& output, const Student student)
+ifstream& operator>>(ifstream& input,Student& const student)
 {
-    output << "|Surname : " << student.surname << " | Name: " << student.name << " | Number of album : " << student.album_num << " | Grupe : " << student.grupe << " | Year : " << student.year << " |" << endl;
-    return output;
+    input >> student.surname >> student.name >> student.album_num >> student.grupe >> student.year;
+    return input;   
 }
 
 ofstream& operator<<(ofstream& input,const Student& student)
@@ -19,10 +19,10 @@ ofstream& operator<<(ofstream& input,const Student& student)
     return input;
 }
 
-ifstream& operator>>(ifstream& input, Student& data)
+ostream& operator<<(ostream& output, const Student student)
 {
-    input >> data.surname >> data.name >> data.album_num >> data.grupe >> data.year;
-    return input;   
+    output << "|Surname : " << student.surname << " | Name: " << student.name << " | Number of album : " << student.album_num << " | Grupe : " << student.grupe << " | Year : " << student.year << " |" << endl;
+    return output;
 }
 
 int Student::Get_Year()

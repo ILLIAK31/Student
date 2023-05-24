@@ -30,4 +30,18 @@ int Student::Get_Year()
     return this->year;
 }
 
+void Student::Set_Value(const string Surname, const string Name, const string Album_num, const string Grupe, const int Year)
+{
+    this->surname = Surname;
+    this->name = Name;
+    this->album_num = Album_num;
+    this->grupe = Grupe;
+    this->year = Year;
+}
+
+string Student::Get_album_num()
+{
+    return this->album_num;
+}
+
 Student::~Student(){}

@@ -17,6 +17,51 @@ int main()
         while (obj >> student)
             students.push_back(student);
     obj.close();
+    do
+    {
+        int menu;
+        cout << "Menu :\n1.Add student\n2.Delete student\n3.Next\nEnter : ";
+        cin >> menu;
+        if (menu == 1)
+        {
+            string Surname, Name, Album_num, Grupe;
+            int Year;
+            cout << "Give surname : ";
+            cin >> Surname;
+            cout << "Give name : ";
+            cin >> Name;
+            cout << "Give number of album : ";
+            cin >> Album_num;
+            cout << "Give grupe number : ";
+            cin >> Grupe;
+            cout << "Give year : ";
+            cin >> Year;
+            student.Set_Value(Surname, Name, Album_num, Grupe, Year);
+            students.push_back(student);
+        }
+        else if(menu == 2)
+        {
+            string num;
+            int index = 0;
+            cout << "Give number of album to delete student\nNumber: ";
+            cin >> num;
+            for (auto obj : students)
+            {
+                if (obj.Get_album_num() == num)
+                    students.erase(students.begin() + index);
+                ++index;
+            }
+        }
+        else if(menu == 3)
+        {
+            break;
+        }
+        else
+        {
+            cout << "\nWrong choose\n";
+            break;
+        }
+    } while (true);
     ofstream obj2("Data.txt");
     if (obj2.is_open())
         for (auto student : students)

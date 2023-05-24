@@ -11,5 +11,7 @@ public:
 	friend ofstream& operator<<(ofstream& input,const Student& student);
 	friend ostream& operator<<(ostream& output,const Student student);
 	int Get_Year();
+	void Set_Value(const string Surname,const string Name,const string Album_num,const string Grupe,const int Year);
+	string Get_album_num();
 	~Student();
 };

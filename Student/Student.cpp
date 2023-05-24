@@ -25,18 +25,24 @@ ostream& operator<<(ostream& output, const Student student)
     return output;
 }
 
+istream& operator>>(istream& input, Student& const student)
+{
+    cout << "Give surname : ";
+    input >> student.surname;
+    cout << "Give name : ";
+    input >> student.name;
+    cout << "Give number of album : ";
+    input >> student.album_num;
+    cout << "Give grupe number : ";
+    input >> student.grupe;
+    cout << "Give year : ";
+    input >> student.year;
+    return input;
+}
+
 int Student::Get_Year()
 {
     return this->year;
-}
-
-void Student::Set_Value(const string Surname, const string Name, const string Album_num, const string Grupe, const int Year)
-{
-    this->surname = Surname;
-    this->name = Name;
-    this->album_num = Album_num;
-    this->grupe = Grupe;
-    this->year = Year;
 }
 
 string Student::Get_album_num()

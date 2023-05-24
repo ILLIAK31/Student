@@ -24,19 +24,7 @@ int main()
         cin >> menu;
         if (menu == 1)
         {
-            string Surname, Name, Album_num, Grupe;
-            int Year;
-            cout << "Give surname : ";
-            cin >> Surname;
-            cout << "Give name : ";
-            cin >> Name;
-            cout << "Give number of album : ";
-            cin >> Album_num;
-            cout << "Give grupe number : ";
-            cin >> Grupe;
-            cout << "Give year : ";
-            cin >> Year;
-            student.Set_Value(Surname, Name, Album_num, Grupe, Year);
+            cin >> student;
             students.push_back(student);
         }
         else if(menu == 2)
